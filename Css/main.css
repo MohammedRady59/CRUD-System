@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --head-color: #f7ecde;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.empollee {
+  background-color: #3f5b73;
+}
+table {
+  font-family: "Righteous", sans-serif;
+}
+.product {
+  background-color: white;
+}
+.addProduct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.253) 0% 100%);
+}
+.close {
+  cursor: pointer;
+}

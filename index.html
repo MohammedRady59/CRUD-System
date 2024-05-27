@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD SYSTEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/main.css" />
+    <script defer src="Js/bootstrap.bundle.min.js"></script>
+    <script defer src="Js/index.js"></script>
+  </head>
+  <body>
+    <section class="position-relative">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between empollee p-3">
+          <div><h2 class="text-light">Mangment employee</h2></div>
+          <div>
+            <button
+              id="deleteAll"
+              class="btn btn-outline-danger bg-danger text-light fs-6 btn-sm"
+            >
+              <i class="fa-solid fa-trash pe-2"></i>Delete ALL
+            </button>
+            <button
+              id="addProduct"
+              class="btn btn-outline-success bg-success text-light fs-6 btn-sm"
+            >
+              <i class="fa-solid fa-circle-plus pe-2"></i>Add Proudct
+            </button>
+          </div>
+        </div>
+        <div>
+          <table class="table border shadow text-center">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="rowdata">
+              <!--  <tr>
+                <td>1</td>
+                <td>Ipnone</td>
+                <td>9000</td>
+                <td>Mobile</td>
+                <td>GOOD</td>
+
+                <td>
+                  <button class="btn btn-outline-warning btn-sm">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn btn-outline-danger btn-sm">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section
+      id="pageAdd"
+      class="addProduct d-flex justify-content-center align-items-center d-none"
+    >
+      <div class="container product shadow-lg p-4 rounded">
+        <div class="pb-3 d-flex justify-content-between">
+          <h2>New Employee</h2>
+          <div class="fs-1 bg-danger p-1 rounded-2 text-light close">X</div>
+        </div>
+        <div class="form-floating my-1">
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            placeholder=""
+          />
+          <label for="productName">Product Name </label>
+        </div>
+
+        <div class="form-floating my-1">
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            placeholder=""
+          />
+          <label for="productPrice">Product Price </label>
+        </div>
+
+        <div class="form-floating my-1">
+          <input
+            list="category"
+            type="text"
+            class="form-control"
+            id="productCategory"
+            placeholder=""
+          />
+          <label for="productCategory">Product Category </label>
+
+          <datalist id="category">
+            <option value="TV" />
+            <option value="Mobile" />
+            <option value="Screens" />
+            <option value="Electronic" />
+          </datalist>
+        </div>
+
+        <div class="form-floating my-1">
+          <textarea
+            style="height: 100px"
+            class="form-control"
+            id="productDescription"
+            placeholder=""
+          ></textarea>
+          <label for="productDescription">Product Description </label>
+        </div>
+        <div class="mt-3">
+          <button id="btnAdd" class="btn btn-primary">Add</button>
+        </div>
+        <div class="mt-3">
+          <button id="btnupdate" class="btn btn-warning d-none">Update</button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="pagenoAdd"
+      class="addProduct d-flex justify-content-center align-items-center d-none"
+    >
+      <div class="container product shadow-lg p-4 rounded text-center">
+        <h1 class="h4">No data Add Please Check Your Inputs</h1>
+        <button class="btn btn-warning btnokNo">Ok</button>
+      </div>
+    </section>
+  </body>
+</html>
